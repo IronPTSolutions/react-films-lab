@@ -2,7 +2,7 @@ import React from 'react';
 import './ImageDiv.css';
 
 function ImageDiv(props) {
-    const genres = props.genre.map(genre => <li className={`${genre} genreDiv`}>{genre}</li>)
+    const genres = props.genre.map(genre => <li key={genre} className={`${genre} genreDiv`}>{genre}</li>)
     return (
         <div className="ImageDiv" style={{backgroundImage: `url(${props.posterurl})`}}>
             <ul className="genresUl">

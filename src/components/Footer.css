@@ -1,5 +1,5 @@
 .Footer {
-    background-color: rgb(211, 207, 207);
+    background-color: rgba(211, 207, 207, 0.856);
     display: flex;
     justify-content: space-between;
     width: 100%;

@@ -4,14 +4,7 @@
     background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-.redX {
-    width: 100%;
-    color: rgb(219, 61, 61);
-    text-align: end;
-    padding-right: 5px;
+    justify-content: flex-end
 }
 
 .genreDiv {
@@ -22,7 +15,6 @@
     font-size: 12px;
     margin-right: 4px;
 }
-
 
 .Animation,
 .Adventure,

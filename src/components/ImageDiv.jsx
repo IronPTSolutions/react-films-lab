@@ -5,7 +5,6 @@ function ImageDiv(props) {
     const genres = props.genre.map(genre => <li className={`${genre} genreDiv`}>{genre}</li>)
     return (
         <div className="ImageDiv" style={{backgroundImage: `url(${props.posterurl})`}}>
-            <div className="redX"><b>x</b></div>
             <ul className="genresUl">
                 {genres}
             </ul>

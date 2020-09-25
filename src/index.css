@@ -12,3 +12,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.delete-movie {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.card-body {
+  position: relative;
+}
+
+.movie-genres {
+  position: absolute;
+  left: 10px;
+  top: -30px;
+}

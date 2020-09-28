@@ -1,8 +1,28 @@
 import React from 'react';
+import Header from './components/header/Header';
+import Wraper from './components/wraper/wraper';
+import Card from './components/card/card';
+import'./index.css'
+
 
 const App = () => (
   <div className="App">
-    {/* Your code here */}
+    <Header />
+    <Wraper 
+    cards ={
+      <Card />
+      
+  
+
+    }
+    
+    />
+    
+
+
+
+
+
   </div>
 )
 

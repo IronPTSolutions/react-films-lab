@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://ironptsolutions.github.io/react-films",
   "dependencies": {
-    "bootstrap": "^4.3.1",
+    "bootstrap": "^4.5.2",
     "font-awesome": "^4.7.0",
     "gh-pages": "^2.0.1",
     "react": "^16.8.3",

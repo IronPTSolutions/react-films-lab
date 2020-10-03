@@ -1,0 +1,44 @@
+.film-genre {
+	position: absolute;
+	left: 10px;
+	top: -30px;
+}
+
+.delete-film {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	cursor: pointer;
+}
+
+.Action,
+.Animation {
+    background-color: #dc3545;
+    color: white;
+}
+
+.Crime,
+.Horror {
+	background-color: #ffc107;
+}
+
+.Comedy,
+.Documentary,
+.Thriller,
+.Biography,
+.Mystery,
+.Sci-Fi,
+.Family {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.Fantasy,
+.Adventure {
+    background-color: #28a745;
+    color: white;
+}
+.Drama {
+    background-color: #6c757d;
+    color: white;
+}

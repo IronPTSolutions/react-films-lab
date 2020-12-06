@@ -1,0 +1,43 @@
+.ImageDiv {
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end
+}
+
+.genreDiv {
+    padding: 3px;
+    border-radius: 5px;
+    background-color: grey;
+    color: white;
+    font-size: 12px;
+    margin-right: 4px;
+}
+
+.Animation,
+.Adventure,
+.Fantasy {
+    background-color: rgb(22, 146, 59);
+}
+
+.Action,
+.Romance {
+    background-color: rgb(219, 61, 61);
+}
+
+.Sci-Fy,
+.Comedy,
+.Documentary
+.Mistery,
+.Thriller,
+.Biography,
+.Music {
+    background-color: rgb(66, 146, 238);
+}
+
+.Crime,
+.Horror {
+    background-color: rgb(211, 211, 32);
+}

@@ -1,9 +1,11 @@
 import React from 'react';
+import '../assets/css/Card.css';
 
 const Card = (props) => {
     return (
-        <div className="Card border mb-3" style={{maxWidth: '18rem', borderRadius: '0.2rem', display:'inline-block'}}>
-            <img className="card-img-top" src={props.poster} alt='poster'/>
+        <div className="Card border mb-3" style={{maxWidth: '18rem'}}>
+            <small className="delete-movie" onClick={props.clickToDelete}>&#10060;</small>
+            <img className="card-img-top border-bottom" src={props.posterurl} alt='poster'/>
             <div className="card-body">
                 <div className="movie-genre">
                     <span className="badge badge-light border mr-1 mb-2">{props.genres[0]}</span>
@@ -15,7 +17,7 @@ const Card = (props) => {
             </div>
             <div className="card-footer text-muted d-flex justify-content-between">
                 <small className="font-weight-bold">{props.year}</small>
-                <small className="font-weight-bold">{props.imdbRating} ⭐</small>
+                <small className="font-weight-bold">{props.imdbRating || '6.5'} ⭐</small>
             </div>
         </div> 
     );

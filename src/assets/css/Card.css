@@ -1,0 +1,11 @@
+.Card {
+    border-radius: '0.2rem';
+    display: inline-block;
+    position: relative;
+}
+
+.Card .delete-movie {
+    position: absolute;
+        right: 0.2rem;
+        top: 0;
+}

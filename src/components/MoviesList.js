@@ -26,9 +26,9 @@ class MoviesList extends Component {
                     <div className='col-12'>
                         <div className='card-columns'>
                         {
-                        this.state.movies.map(movie => {
+                        this.state.movies.map((movie, idx) => {
                             return <Card
-                                key={movie.id}
+                                key={movie.id || idx}
                                 {...movie}
                                 clickToDelete={() => this.deleteMovieHandler(movie.id)}
                                 />

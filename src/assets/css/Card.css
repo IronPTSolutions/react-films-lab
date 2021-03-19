@@ -6,6 +6,14 @@
 
 .Card .delete-movie {
     position: absolute;
-        right: 0.2rem;
-        top: 0;
+        right: 0.4rem;
+        top: 0.2rem;
+}
+
+.Card .delete-movie:hover {
+    cursor: pointer;
+}
+
+.Card .movie-genre {
+    border-radius: '0.5rem';
 }

@@ -16,7 +16,8 @@ class MoviesWrapper extends React.Component {
   render() {
     const customData = this.state.customData;
     return (
-
+    
+      
     <div className='MoviesWrapper container'>
       { customData.length ? (
         <div className='row d-flex justify-content-center align-items-start'>

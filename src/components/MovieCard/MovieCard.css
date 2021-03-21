@@ -1,0 +1,12 @@
+.MovieCard{
+    margin: 15px;
+ 
+}
+
+.delete__icon{
+    color:red !important;
+    cursor: pointer !important;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}

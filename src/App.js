@@ -11,7 +11,6 @@ const App = () => {
     <div className="App">
         <Header/>
         <CardContainer/>
-        <Card/>
     </div>
   )
 }

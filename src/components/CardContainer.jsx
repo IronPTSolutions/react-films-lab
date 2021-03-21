@@ -1,12 +1,36 @@
-import React from 'react'
-import '../assets/css/CardContainer.css'
+import React, {Component} from 'react'
+import data from '../data/films.json'
 
-const CardContainer = () => {
-  return (
-    <div className="Card__container container">
-        
-    </div>
-  )
+//components
+import Card from './Card'
+
+
+class CardContainer extends Component {
+  state = {
+    films: [...data]
+  }
+
+  render() {
+
+    return (
+      <section className="Card__container">
+        <div className="container">
+
+        <div className="row g-3 row-cols-1 row-cols-sm-2 row-cols-md-3" >
+          {this.state.films.map(film => (
+            <div className="col" key={film.id}>
+              <Card {...film} />
+            </div>
+          ))}
+        </div>
+    
+        </div>
+      </section>
+    )
+
+  }
 }
+
+
 
 export default CardContainer

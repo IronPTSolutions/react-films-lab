@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://ironptsolutions.github.io/react-films",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "bootstrap": "^4.6.0",
     "font-awesome": "^4.7.0",
     "gh-pages": "^2.0.1",

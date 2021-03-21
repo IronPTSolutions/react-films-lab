@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './App.css';
+import 'antd/dist/antd.css';
+import Header from './components/Header/Header'
+import CardList from './components/CardList/CardList'
+import { BackTop } from 'antd';
 
-const App = () => (
-  <div className="App">
-    {/* Your code here */}
-  </div>
-)
+function App() {
 
-export default App
+  return (
+    <div className="App" style={{ maxWidth: 1000, margin: '0px auto' }}>
+      <Header/>
+      <CardList />
+      <BackTop />
+    </div>
+  );
+}
+
+export default App;

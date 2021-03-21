@@ -1,28 +1,72 @@
 import React from 'react';
-import customData from '../../data/films.json'
-class MovieCard extends React.Component {
- 
- 
-  render() {
-    return <div className='MovieCard'>
-            <div class="card" style={{width: '18rem'}}>
-                <img src={customData[0].posterurl} class="card-img-top" alt="..."/>
-                <div class="card-body">
+
+const MovieCard = ({ title,year, genres, ratings, storyline, posterurl, id }) => {
+    
+    const genColor = (genre) => {
+        switch(genre) {
+            case 'Action':
+            case 'Animation':
+            case 'Romance' :
+                return '#dc3545'
+            
+
+            case 'Comedy':
+            case 'Sci-Fi':
+            case 'Mistery':
+            case 'Thriller':
+            case 'Biography':
+            case 'Documentary':
+            case 'Music':
+            case 'Family':
+                return '#17a2b8'
+
+            case 'Adventure':
+            case 'Fantasy':
+                return '#28a745'
+
+            case 'Horror':
+            case 'Crime':
+                return  '#ffc107'
+
+            default:
+                return  '#6c757d'
+              
+          }
+    }
+
+    const rateAvg = (rates) => {
+
+        const sum = rates.reduce((accumulator, currentValue) => accumulator + currentValue)
+        return (sum/rates.length).toFixed(1)
+        
+    }
+    
+    return (
+        <div className='MovieCard'>
+            <div className="card" style={{width: '18rem'}}>
+                <img src={posterurl} className="card-img-top" alt={title}/>
+                <div className="card-body">
                     <div className="film__genres">
-                        <span class="badge bg-secondary">New</span>
+                        {
+                            genres.map( gen => (
+                                <span className="badge ml-2" style={{backgroundColor: genColor(gen), color: 'white' }} >{gen}</span>
+                            ))
+
+                        }
+                        
                     </div>
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h5 className="card-title mt-3">{title}</h5>
+                    <p className="card-text">{storyline}</p>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item d-flex justify-content-between">
-                    <small>Year</small>
-                    <small>⭐ Stars</small>
+                <ul className="list-group list-group-flush">
+                    <li className="list-group-item d-flex justify-content-between">
+                    <small>{year}</small>
+                    <small><span> <span class="fa fa-star yellowColor" style={{color: '#ffc107'}}></span> {rateAvg(ratings)}</span> </small>
                     </li>
                 </ul>
             </div>
-    </div>;
+        </div>
+    );
   }
-}
- 
-export default MovieCard;
+
+  export default MovieCard;

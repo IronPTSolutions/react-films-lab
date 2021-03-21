@@ -1,0 +1,9 @@
+.MovieCard{
+    margin: 15px;
+}
+
+.film__genres{
+    position: absolute;
+    left: 10px;
+    top: -30px;
+}

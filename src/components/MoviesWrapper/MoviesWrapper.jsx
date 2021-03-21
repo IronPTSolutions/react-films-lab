@@ -7,18 +7,29 @@ class MoviesWrapper extends React.Component {
  
     state = {customData: [...data]} 
  
+    deleteItem = (movieId) => {
+      this.setState({
+        customData: this.state.customData.filter(movie => movie.id !== movieId),
+      })
+    }
+
   render() {
     const customData = this.state.customData;
     return (
 
     <div className='MoviesWrapper container'>
-        <div className='row d-flex justify-content-center'>
+      { customData.length ? (
+        <div className='row d-flex justify-content-center align-items-start'>
             {customData.map(movie => (
-              <div className="col-12 col-md-4 col-lg-3" key={movie.id}>
-                <MovieCard {...movie}/>
+              <div className="col-12 col-md-6 col-lg-4 " key={movie.id}>
+                <MovieCard {...movie} onDelete={() => this.deleteItem(movie.id)} />
               </div>
             ))}
-          </div>
+          </div>) : (
+             <p className="text-center">There are no movies left</p>
+          )
+
+      }
     </div>
     
     )

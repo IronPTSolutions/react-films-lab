@@ -1,9 +1,12 @@
 .MovieCard{
     margin: 15px;
+ 
 }
 
-.film__genres{
+.delete__icon{
+    color:red !important;
+    cursor: pointer !important;
     position: absolute;
-    left: 10px;
-    top: -30px;
+    right: 10px;
+    top: 10px;
 }

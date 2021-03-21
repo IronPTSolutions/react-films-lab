@@ -1,6 +1,6 @@
 import React from 'react';
-
-const MovieCard = ({ title,year, genres, ratings, storyline, posterurl, id }) => {
+import './MovieCard.css'
+const MovieCard = ({ title,year, genres, ratings, storyline, posterurl, onDelete, id }) => {
     
     const genColor = (genre) => {
         switch(genre) {
@@ -33,17 +33,29 @@ const MovieCard = ({ title,year, genres, ratings, storyline, posterurl, id }) =>
               
           }
     }
-
+    
     const rateAvg = (rates) => {
 
         const sum = rates.reduce((accumulator, currentValue) => accumulator + currentValue)
         return (sum/rates.length).toFixed(1)
         
     }
-    
+
+    const cardColor = (rates) => {
+
+        const avg = rateAvg(rates)
+        if(avg >= 6){
+            return '#aaff80'
+        } else {
+            return 'white'
+        }
+        
+    }
+
     return (
         <div className='MovieCard'>
-            <div className="card" style={{width: '18rem'}}>
+            <div className="card" style={{width: '18rem', backgroundColor: cardColor(ratings) }}>
+                <i onClick={() => onDelete(id)} className="fa fa-times delete__icon" aria-hidden="true"></i>
                 <img src={posterurl} className="card-img-top" alt={title}/>
                 <div className="card-body">
                     <div className="film__genres">
@@ -61,7 +73,7 @@ const MovieCard = ({ title,year, genres, ratings, storyline, posterurl, id }) =>
                 <ul className="list-group list-group-flush">
                     <li className="list-group-item d-flex justify-content-between">
                     <small>{year}</small>
-                    <small><span> <span class="fa fa-star yellowColor" style={{color: '#ffc107'}}></span> {rateAvg(ratings)}</span> </small>
+                    <small><span> <span className="fa fa-star yellowColor" style={{color: '#ffc107'}}></span> {rateAvg(ratings)}</span> </small>
                     </li>
                 </ul>
             </div>

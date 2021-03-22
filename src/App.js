@@ -1,9 +1,18 @@
 import React from 'react';
 
-const App = () => (
-  <div className="App">
-    {/* Your code here */}
-  </div>
-)
+//components
+import Header from './components/Header'
+import CardContainer from './components/CardContainer'
+
+
+
+const App = () => {
+  return(
+    <div className="App">
+        <Header/>
+        <CardContainer/>
+    </div>
+  )
+}
 
 export default App

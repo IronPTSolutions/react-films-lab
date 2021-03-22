@@ -7,6 +7,12 @@ class Films extends Component {
         movies: [...data]
     }
 
+    deleteMovie = (id) => {
+        this.setState({
+            movies: this.state.movies.filter((movie)=> movie.id !== id)
+        })
+    }
+
     render() {
         return (
             <div className="Films py-5">
@@ -15,8 +21,8 @@ class Films extends Component {
                         {
                             this.state.movies.map((movie) => {
                                 return (      
-                                <div className="col-4">
-                                    <FilmItem key={movie.id} {...movie} />           
+                                <div key={movie.id} className="col-4">
+                                    <FilmItem {...movie} onDelete={() => this.deleteMovie(movie.id)} />           
                                 </div>
                             )
                             }) 

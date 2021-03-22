@@ -1,6 +1,6 @@
 import React from 'react'
 
-const FilmItem = ({ posterurl, title, genres, storyline, year, ratings }) => {
+const FilmItem = ({ posterurl, title, genres, storyline, year, ratings, onDelete }) => {
     
     //Average of ratings
     let sum = ratings.reduce((previous, current) => current += previous)
@@ -8,7 +8,7 @@ const FilmItem = ({ posterurl, title, genres, storyline, year, ratings }) => {
     
     return (
         <div className="card">
-            <button className="btn btn-primary-outline">x</button>
+            <button onClick={ onDelete }className="btn btn-primary-outline">x</button>
             <img className="card-img-top" src={posterurl} alt={title}/>
             <div>
                 <span>{genres}</span>

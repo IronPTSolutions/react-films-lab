@@ -1,8 +1,12 @@
 import React from 'react';
+import Navbar from './components/Navbar/Navbar'
+import Films from './components/Films/Films'
 
 const App = () => (
   <div className="App">
-    {/* Your code here */}
+    <Navbar />
+
+    <Films />
   </div>
 )
 

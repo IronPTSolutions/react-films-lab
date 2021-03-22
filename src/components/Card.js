@@ -3,10 +3,26 @@ import Genre from './Genre';
 import '../assets/css/Card.css';
 
 const Card = (props) => {
-    const rating = props.imdbRating
-    const genres = props.genres.map((genre, idx) => <Genre id={idx} genre={genre} />)
+    let rating = props.imdbRating
+    const genres = props.genres.map((genre, idx) => <Genre key={idx} genre={genre} />)
+
+    let cardBgColor;
+    let footerColor;
+    let footerTextColor = 'text-muted';
+    if (rating < 7 && rating > 5.5) {
+        cardBgColor = 'bg-warning';
+    } else if (!rating) {
+        cardBgColor = 'bg-light'
+        footerColor = 'bg-warning';
+    } else if (rating <= 5.5 && rating) {
+        cardBgColor = 'bg-danger';
+        footerTextColor = 'text-white';
+    }
+
+    if (typeof rating === 'number') rating = parseFloat(rating).toFixed(1)
+
     return (
-        <div className="Card border mb-3" id={props.id} style={{maxWidth: '18rem'}}>
+        <div className={`Card border mb-3 ${cardBgColor}`} key={props.id} style={{maxWidth: '18rem'}}>
             <small className="delete-movie" onClick={props.clickToDelete}>&#10060;</small>
             <img className="card-img-top border-bottom" src={props.posterurl || Card.defaultProps.posterurl} alt='poster'/>
             <div className="card-body">
@@ -16,9 +32,9 @@ const Card = (props) => {
                 <h5 className="card-title">{props.title}</h5>
                 <p className="card-text text-justify">{props.storyline}</p>
             </div>
-            <div className="card-footer text-muted d-flex justify-content-between">
+            <div className={`card-footer ${footerTextColor} d-flex justify-content-between ${footerColor}`}>
                 <small className="font-weight-bold">{props.year}</small>
-                <small className="font-weight-bold">{rating || Card.defaultProps.imdbRating} ⭐</small>
+                <small className="font-weight-bold">{ rating || Card.defaultProps.imdbRating } ⭐</small>
             </div>
         </div> 
     );
@@ -29,7 +45,7 @@ Card.defaultProps = {
     title: ' Está la Cosa Muy Malar',
     storyline: 'Lorem fistrum amatomaa ahorarr ese hombree mamaar por la gloria de mi madre a wan no te digo trigo por no llamarte Rodrigor de la pradera. Torpedo apetecan a peich diodeno me cago en tus muelas qué dise usteer qué dise usteer caballo blanco caballo negroorl diodeno por la gloria de mi madre.',
     year: 2018,
-    imdbRating: 6.5,
+    imdbRating: 'No rating provided',
     genres: [
         "Genre 1",
         "Genre 2",

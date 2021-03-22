@@ -32,8 +32,9 @@ const Genre = (props) => {
             color = 'light'
             break;
     }
+    
     return (
-        <span className={`badge badge-${color} border mr-1 mb-2`}>{props.genre}</span>
+        <span className={`badge badge-${color} mr-1 mb-2`}>{props.genre}</span>
     )
 }
 

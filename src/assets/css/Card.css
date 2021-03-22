@@ -1,3 +1,17 @@
 .card__style{
     width: 18rem;
 }
+
+
+.delete-film {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.card-img-top{
+ max-height: 400px;    
+ min-height: 400px; 
+
+}

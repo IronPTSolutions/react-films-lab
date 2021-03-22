@@ -1,9 +1,12 @@
-import React from 'react';
+import React from "react";
+import Header from "./components/Header";
+import Movies from "./components/Movies";
 
 const App = () => (
   <div className="App">
-    {/* Your code here */}
+    <Header title="Iron Films" subtitle="React component state tutorial" />
+    <Movies />
   </div>
-)
+);
 
-export default App
+export default App;

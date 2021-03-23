@@ -1,8 +1,13 @@
+import Navbar from './components/Navbar/Navbar'
 import React from 'react';
+import Album from './components/Album';
 
 const App = () => (
   <div className="App">
-    {/* Your code here */}
+    <Navbar />
+
+    <Album />
+    
   </div>
 )
 

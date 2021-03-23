@@ -1,0 +1,20 @@
+.footer-card {
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid ;
+}
+
+.delete-button{
+    font-size: 1rem;
+    font-weight: 800;
+    color:red;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.genre {
+    margin-right:.3rem;
+    padding: .3rem;
+    border-radius: .5rem;
+}

@@ -1,0 +1,38 @@
+
+.button{
+    position: absolute;
+    margin-left: 90%;
+  
+    
+}
+.footer{
+display: flex;
+
+}
+.rating{
+    margin-left: 180px;
+}
+
+.genres{
+    color: white;
+    font-family:sans-serif
+}
+.genres .gen1{
+    margin-left: 5px;
+    background-color: red;
+    border-radius: 8px;
+    padding:1px 8px;
+    
+}
+.genres .gen2{
+    margin-left: 5px;
+    background-color:#17a2b8;
+    border-radius: 8px;
+    padding:1px 8px;
+}
+.genres .gen3{
+    margin-left: 5px;
+    background-color: #ffc107;
+    border-radius: 8px;
+    padding:1px 8px;
+}

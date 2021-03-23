@@ -26,6 +26,7 @@ const AlbumItem = ({title,storyline,posterurl,year,imdbRating,onDelete,id,genres
                     <div className="card-footer footer justify-content-betwee">
                         <div className="year">{year}</div>
                         <div className="rating">{imdbRating}</div>
+                        <i class="fa fa-star text-warning"></i>
                     
              
             

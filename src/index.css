@@ -12,3 +12,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.App {
+  background-color: #e9ecef;
+}
+
+.Main {
+  background-color: #fff;
+  height: 100%;
+}
+
+.card {
+  min-width: 250px;
+  max-width: 300px;
+}
+
+.delete-film {
+  position: relative;
+  left: 90%;
+  top: 4%;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.delete-film:hover {
+  text-decoration: underline overline;
+}

@@ -1,0 +1,11 @@
+.navbar-custom {
+    background-color: #e9ecef;
+    height: 280px;
+    padding: 4rem 2rem;
+}
+.title{
+    font-size: 56px;
+}
+.subtitle {
+    font-weight: lighter;
+}

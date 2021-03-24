@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { Component, Fragment } from "react";
 
-const App = () => (
-  <div className="App">
-    {/* Your code here */}
-  </div>
-)
+import FilmList from "./components/films/FilmList";
+import Header from "./components/misc/Header";
 
-export default App
+export default class App extends Component {
+  render() {
+    return (
+      <Fragment>
+        <Header />
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <FilmList />
+            </div>
+          </div>
+        </div>
+      </Fragment>
+    );
+  }
+}

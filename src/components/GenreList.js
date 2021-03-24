@@ -11,6 +11,7 @@ const genreStyle = {
     Thriller: {backgroundColor: "#007bff"},
     Horror: {backgroundColor: "#343a40"},
     Family: {backgroundColor: "#6f42c1"},
+    no: {backgroundColor: "#343a40"},
   };
 
 const GenreList = ({genres}) => {
@@ -18,7 +19,7 @@ const GenreList = ({genres}) => {
         <div>
             {genres.map((g, i) => {
                 return (
-                <spa key={i} className='mx-1 p-1 rounded' style={genreStyle[g]}>{g}</spa>
+                <spa key={i} className='mx-1 p-1 rounded' style={genreStyle[g] || genreStyle.no }>{g}</spa>
                     )
             })}
         </div>)

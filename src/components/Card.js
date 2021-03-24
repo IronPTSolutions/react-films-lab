@@ -3,26 +3,31 @@ import Genre from './Genre';
 import '../assets/css/Card.css';
 
 const Card = (props) => {
-    let rating = props.imdbRating
+    let rating = props.ratings;
+    rating = (rating.reduce((acc, val) => (acc+val)) / rating.length).toFixed(1);
+
+    if (props.imdbRating !== "") {
+        rating = props.imdbRating;
+    }
+
     const genres = props.genres.map((genre, idx) => <Genre key={idx} genre={genre} />)
 
-    let cardBgColor;
     let footerColor;
     let footerTextColor = 'text-muted';
-    if (rating < 7 && rating > 5.5) {
-        cardBgColor = 'bg-warning';
-    } else if (!rating) {
-        cardBgColor = 'bg-light'
+    if (rating >= 7) {
+        footerColor = 'bg-success';
+        footerTextColor = 'text-white';
+    } else if (rating < 7 && rating > 5.5) {
         footerColor = 'bg-warning';
-    } else if (rating <= 5.5 && rating) {
-        cardBgColor = 'bg-danger';
+    } else if (rating <= 5.5) {
+        footerColor = 'bg-danger';
         footerTextColor = 'text-white';
     }
 
     if (typeof rating === 'number') rating = parseFloat(rating).toFixed(1)
 
     return (
-        <div className={`Card border mb-3 ${cardBgColor}`} key={props.id} style={{maxWidth: '18rem'}}>
+        <div className={"Card border mb-3 "} key={props.id} style={{maxWidth: '18rem'}}>
             <small className="delete-movie" onClick={props.clickToDelete}>&#10060;</small>
             <img className="card-img-top border-bottom" src={props.posterurl || Card.defaultProps.posterurl} alt='poster'/>
             <div className="card-body">
@@ -42,7 +47,7 @@ const Card = (props) => {
 
 Card.defaultProps = {
     posterurl: 'https://www.chiquitoipsum.com/img/chiquito-full.png',
-    title: ' Está la Cosa Muy Malar',
+    title: 'Está la Cosa Muy Malar',
     storyline: 'Lorem fistrum amatomaa ahorarr ese hombree mamaar por la gloria de mi madre a wan no te digo trigo por no llamarte Rodrigor de la pradera. Torpedo apetecan a peich diodeno me cago en tus muelas qué dise usteer qué dise usteer caballo blanco caballo negroorl diodeno por la gloria de mi madre.',
     year: 2018,
     imdbRating: 'No rating provided',

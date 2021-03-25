@@ -1,0 +1,17 @@
+@import 'src/style_partials/constants.scss';
+@import 'src/style_partials/mixins.scss';
+
+.Genrefilter {
+    @include container-ext;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: $light;
+    > button {
+        margin: 2px;
+        font-size: 1rem;
+        color: #ffffff;
+        border: none;
+        border-radius: 10px;
+        padding: 3px 8px;
+    }
+}

@@ -23,12 +23,17 @@
         text-align: left;
     }
     .textLine {
-        margin: 0;
+        margin: 0 {
+            right: 5px;
+            left: 5px;
+        }
+        text-align: center;
     }
     .genres {
         @include container;
         opacity: 80%;
-        justify-self: baseline;
+        position: absolute;
+        top: 93%;
         > small {
             margin: 2px;
             font-size: 0.7rem;
@@ -37,11 +42,16 @@
             padding: 3px 8px;
         }
     }
-    .textTitle {
-        align-self: flex-start;
-        h4 {
-            margin: 0px;
-        }
+    
+    h4 {
+        margin-top: 8px;
+        margin-bottom: 0px;
+        margin-right: 8px;
+        margin-left: 8px;
+        text-align: center;
+    }
+    h5 {
+        margin: 0px;
     }
 
     button {
@@ -49,21 +59,20 @@
         color: #ffffff;
         align-self: flex-end;
         margin-right: 5px;
-        margin-top: 5px;
         border: none;
         border-radius: 50%;
         position: absolute;
+        top: 2%;
     }
 
     .rates {
-        border-bottom-left-radius: 10px;
-        border-top-left-radius: 10px;
+        text-align: center;
+        width: 100%;
         position: absolute;
+        top: 66%;
         background-color: $dark;
         padding: 6px;
-        margin-top: 35px;
         color: $light;
-        align-self: flex-end;
         font-size: 0.9rem;
         font-weight: 600;
     }
@@ -71,6 +80,5 @@
     .rateHigh {
         background-color: $light;
         color: $dark;
-        font-size: 1.1rem;
     }
 }

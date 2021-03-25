@@ -2,7 +2,7 @@ import React from 'react'
 
 const MoviesItems = ({ id, title, storyline, posterurl, onDelete, ratings, year, genres }) => {
 
-    const averageRatings = (rat) => {
+    const averageRatings = () => {
         const average = ratings.reduce((a, b) => (a + b)) / ratings.length;
         return average.toFixed(1)
 
@@ -48,20 +48,17 @@ const MoviesItems = ({ id, title, storyline, posterurl, onDelete, ratings, year,
 
         }
     }
-//Sacar los generos por color
-const Genrefilms = (props) => {
-    let color = colorGenre(props.genres);
+    //Sacar los generos por color
+    const Genrefilms =  genres.map((genre, i ) => <span key={i} className="genre" style={{backgroundColor:colorGenre(genre), color:'#fff'}}>{genre}</span>)
 
-    return <span className={"badge mr-1 badge-" + color}>{props.genre}</span>
-
-}
+    
 
 
     return (
         <div className="Card card" >
             <div className="Card card">
-            <i className="fa fa-trash delete" onClick={() => onDelete(id)}></i>
-            <img src={posterurl} className="card-img-top" alt="..." />
+                <i className="fa fa-trash delete" onClick={() => onDelete(id)}></i>
+                <img src={posterurl} className="card-img-top" alt="..." />
             </div>
             <div className="card-body" style={{ backgroundColor: filmRate(averageRatings) }}>
                 <div className="card-genre">{Genrefilms}</div>

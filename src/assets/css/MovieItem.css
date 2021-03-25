@@ -1,0 +1,27 @@
+.btn__remove{
+    background-image: url('/delete.png');
+    height: 15px;
+    width: 15px;
+    background-position: center; 
+    background-repeat: no-repeat;
+    text-decoration: none;
+    border: none;
+    background-color: Transparent;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+}
+
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.genres span{
+    position: relative;
+    bottom: 50px;
+    margin: 5px;
+    padding: 4px;
+    border-radius: 10px;
+}

@@ -9,14 +9,20 @@ class Movie extends Component {
         movies: [...movies]
      }
 
+    deleteMovie = (id) => {
+        this.setState({
+            movies: this.state.movies.filter((movie) => movie.id !== id)
+        })
+    }
+
     render() { 
         return ( 
             <div className="Movie">
                 <div className="container">
                     <div className="row g-3 row-cols-1 row-cols-sm-2 row-cols-md-3">
-                        {movies.map(movie => (
+                        {this.state.movies.map(movie => (
                             <div className="col" key={movie.id}>
-                                <MovieItem {...movie}/>
+                                <MovieItem {...movie} onDelete={() => this.deleteMovie(movie.id)} />
                             </div>
                         ))}
                     </div>

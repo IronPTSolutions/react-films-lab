@@ -1,0 +1,9 @@
+.NavBar{
+    background-color: #E9ECEF;
+    padding: 70px;
+}
+
+.NavBar h1{
+    font-size: 4.5rem;
+    font-weight: 200;
+}

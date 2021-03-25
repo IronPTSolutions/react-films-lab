@@ -1,0 +1,91 @@
+@import 'src/style_partials/constants.scss';
+@import 'src/style_partials/mixins.scss';
+
+.FilmItem {
+    @include container-col;
+    border-radius: 10px;
+    margin: 15px;
+    background-color: #ffffff;
+    width: 270px;
+    height: 550px;
+    position: relative;
+
+    > img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+        object-position: center center;
+    }
+    > p {
+        line-height: 14px;
+        text-align: left;
+    }
+    .textLine {
+        margin: 0 {
+            right: 5px;
+            left: 5px;
+        }
+        text-align: center;
+    }
+    .genres {
+        @include container;
+        opacity: 80%;
+        position: absolute;
+        top: 93%;
+        > small {
+            margin: 2px;
+            font-size: 0.7rem;
+            color: #ffffff;
+            border-radius: 10px;
+            padding: 3px 8px;
+        }
+    }
+    
+    h4 {
+        margin-top: 8px;
+        margin-bottom: 0px;
+        margin-right: 8px;
+        margin-left: 8px;
+        text-align: center;
+    }
+    h5 {
+        margin: 0px;
+    }
+
+    button {
+        background-color: $red;
+        color: #ffffff;
+        align-self: flex-end;
+        margin-right: 5px;
+        border: none;
+        border-radius: 50%;
+        position: absolute;
+        top: 2%;
+
+        &:focus {
+            border-style: none;
+            outline: none;
+            padding: 2px 7px;
+            border: 1px solid $red;
+        }
+    }
+
+    .rates {
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        top: 66%;
+        background-color: $dark;
+        padding: 6px;
+        color: $light;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .rateHigh {
+        background-color: $light;
+        color: $dark;
+    }
+}

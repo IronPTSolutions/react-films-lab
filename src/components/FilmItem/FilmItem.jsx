@@ -21,11 +21,11 @@ const FilmItem = ({ id, title, year, genres, ratings, contentRating, duration, r
 
             {
                 meanRatings(ratings) < 6 
-                ? <p className="rates"><i class="fas fa-heart"></i> {meanRatings(ratings)}</p>
-                : <p className="rates rateHigh" ><i class="fas fa-heart"></i> {meanRatings(ratings)} </p>
+                ? <p className="rates"><i className="fas fa-heart"></i> {meanRatings(ratings)}</p>
+                : <p className="rates rateHigh" ><i className="fas fa-heart"></i> {meanRatings(ratings)} </p>
             }
             
-            <button onClick={() => onDelete(id)}><i class="fas fa-times"></i> </button>
+            <button onClick={() => onDelete(id)}><i className="fas fa-times"></i> </button>
 
             <div className="genres">
                 {genres.map((m) => {

@@ -2,9 +2,11 @@
 @import 'src/style_partials/mixins.scss';
 
 .FilmContainer {
-    max-width: 100vw;
-    padding: 50px;
-    @include container-ext;
-    flex-wrap: wrap;
-    background-color: $dark;
+    .allContainer {
+        max-width: 100vw;
+        padding: 50px;
+        @include container-ext;
+        flex-wrap: wrap;
+        background-color: $dark;
+    }
 }

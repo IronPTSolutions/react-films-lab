@@ -6,7 +6,7 @@ const Header = () => {
         <div className="Header">
            <p><i className="fas fa-film fa-10x"></i></p> 
            <p>FilmLover</p>
-           <p><i class="fas fa-chevron-down"></i></p>
+           <p><i className="fas fa-chevron-down"></i></p>
         </div>
     )
 }

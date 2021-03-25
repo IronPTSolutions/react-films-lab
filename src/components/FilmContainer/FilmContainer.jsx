@@ -12,18 +12,20 @@ const FilmContainer = () => {
     }
 
     const onFilter = (g) => {
-        setMovies(movies.filter((m) => m.genres.includes(`${g}`)))
+        setMovies([...films].filter((m) => m.genres.includes(`${g}`)))
     }
 
     return (
         <div>
-            <Genrefilter onFilter={onFilter}/>
-
             <div className="FilmContainer">
+
+            <Genrefilter onFilter={onFilter}/>
+            <div className="allContainer">
                 {movies.map((f) => (
                         <FilmItem {...f} key={f.id} onDelete={onDelete} />
                     )
                 )}
+            </div>
             </div>
         </div>
     )

@@ -2,16 +2,31 @@
 @import 'src/style_partials/mixins.scss';
 
 .Genrefilter {
-    @include container-ext;
-    padding-left: 50px;
-    padding-right: 50px;
-    background-color: $light;
+    @include container;
+    padding: 10px 50px;
+    background-color: $dark;
+    flex-wrap: wrap;
     > button {
-        margin: 2px;
+        opacity: 90%;
+        margin-left: 20px;
+        margin-bottom: 40px;
         font-size: 1rem;
         color: #ffffff;
         border: none;
         border-radius: 10px;
         padding: 3px 8px;
+
+        &:hover {
+            padding: 2px 7px;
+            border: 1px solid $light;
+            /* box-shadow: 2px 2px 2px 1px $light; */
+        }
+
+        &:focus {
+            border-style: none;
+            outline: none;
+            padding: 2px 7px;
+            border: 1px solid $light;
+        }
     }
 }

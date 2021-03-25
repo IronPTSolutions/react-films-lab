@@ -63,6 +63,13 @@
         border-radius: 50%;
         position: absolute;
         top: 2%;
+
+        &:focus {
+            border-style: none;
+            outline: none;
+            padding: 2px 7px;
+            border: 1px solid $red;
+        }
     }
 
     .rates {

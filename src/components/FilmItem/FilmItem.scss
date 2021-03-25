@@ -1,0 +1,76 @@
+@import 'src/style_partials/constants.scss';
+@import 'src/style_partials/mixins.scss';
+
+.FilmItem {
+    @include container-col;
+    border-radius: 10px;
+    margin: 15px;
+    background-color: #ffffff;
+    width: 270px;
+    height: 550px;
+    position: relative;
+
+    > img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+        object-position: center center;
+    }
+    > p {
+        line-height: 14px;
+        text-align: left;
+    }
+    .textLine {
+        margin: 0;
+    }
+    .genres {
+        @include container;
+        opacity: 80%;
+        justify-self: baseline;
+        > small {
+            margin: 2px;
+            font-size: 0.7rem;
+            color: #ffffff;
+            border-radius: 10px;
+            padding: 3px 8px;
+        }
+    }
+    .textTitle {
+        align-self: flex-start;
+        h4 {
+            margin: 0px;
+        }
+    }
+
+    button {
+        background-color: $red;
+        color: #ffffff;
+        align-self: flex-end;
+        margin-right: 5px;
+        margin-top: 5px;
+        border: none;
+        border-radius: 50%;
+        position: absolute;
+    }
+
+    .rates {
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        position: absolute;
+        background-color: $dark;
+        padding: 6px;
+        margin-top: 35px;
+        color: $light;
+        align-self: flex-end;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .rateHigh {
+        background-color: $light;
+        color: $dark;
+        font-size: 1.1rem;
+    }
+}

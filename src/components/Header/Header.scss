@@ -1,0 +1,23 @@
+@import 'src/style_partials/constants.scss';
+@import 'src/style_partials/mixins.scss';
+
+.Header {
+    background-color: $dark;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    > p {
+        color: $light;
+    }
+}
+
+/* > img {
+        opacity: 90%;
+        width: 100vw;
+        height: 500px;
+        object-fit: cover;
+        object-position: left;
+    } */

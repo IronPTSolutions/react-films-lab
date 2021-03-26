@@ -1,4 +1,5 @@
 import React from 'react'
+import './MoviesItems.css'
 
 const MoviesItems = ({ id, title, storyline, posterurl, onDelete, ratings, year, genres }) => {
 
@@ -49,25 +50,29 @@ const MoviesItems = ({ id, title, storyline, posterurl, onDelete, ratings, year,
         }
     }
     //Sacar los generos por color
-    const Genrefilms =  genres.map((genre, i ) => <span key={i} className="genre" style={{backgroundColor:colorGenre(genre), color:'#fff'}}>{genre}</span>)
+    const Genrefilms = genres.map((genre, i) => <span key={i} className="genre" style={{ backgroundColor: colorGenre(genre), color: '#fff' }}>{genre}</span>)
 
-    
+
 
 
     return (
-        <div className="Card card" >
-            <div className="Card card">
+        <div className="Card card">
+            <div className="Card-image">
                 <i className="fa fa-trash delete" onClick={() => onDelete(id)}></i>
                 <img src={posterurl} className="card-img-top" alt="..." />
+                <div className="card-genre mr-1">{Genrefilms}</div>
             </div>
-            <div className="card-body" style={{ backgroundColor: filmRate(averageRatings) }}>
-                <div className="card-genre">{Genrefilms}</div>
-                <h5 className="card-title">{title}</h5>
-                <p className="card-text">{storyline}</p>
+                <div className="card-description" style={{ backgroundColor: filmRate(averageRatings)}} >
+                    
+                    <h5 className="card-title">{title}</h5>
+                    <p className="card-text">{storyline}</p>
+                   
+                </div>
+            
+            <div className="card-averate d-flex justify-content-between">
+                <small className="card-year">{year}</small>
+                <p className="card-star">{averageRatings(ratings)}<span aria-label="star-emoji" role="img" >⭐</span></p>
             </div>
-
-            <small className="card-year">{year}</small>
-            <p className="card-star">{averageRatings(ratings)}<span aria-label="star-emoji" role="img" >⭐</span></p>
         </div>
 
 

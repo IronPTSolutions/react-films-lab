@@ -1,0 +1,39 @@
+
+.delete {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    float:right;
+}
+
+.card-genre {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 30px;
+    padding:5px;
+    margin-right:.25rem!important;
+}
+
+.card-description {
+    position: relative;
+    flex: auto;
+    padding:1.25rem;
+    box-sizing: border-box;
+   
+
+}
+
+.card-text {
+    font-size: 16px;
+}
+
+
+.card-averate {
+    padding: .75rem 1.25rem;
+    background-color: rgba(0,0,0,.03);
+    border-top: 1px solid rgba(0,0,0,.125);
+    box-sizing: border-box;
+}
+

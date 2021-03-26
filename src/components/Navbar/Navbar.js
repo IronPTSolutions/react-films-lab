@@ -1,15 +1,12 @@
 import React from 'react'
+import './Navbar.css'
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-light bg-light">
-            <div className="container">
+        <nav className="navbar-nav navbar-expand-lg jumbotron ">
+            <div className="navbar-div  navbar row">
                 <h1 className="navbar-brand mb-0 h1">Iron Films</h1>
-                <main>
-                    <section className="py-5">
-                        <p className="fw-light">React component state tutorial</p>
-                    </section>
-                </main>
+                <p className="fw-light">React component state tutorial</p>
             </div>
         </nav>
 

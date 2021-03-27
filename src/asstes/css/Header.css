@@ -1,0 +1,14 @@
+.Header {
+    background-color: #e9ecef;
+    height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.Header > section > h1 {
+    font-size: 4rem;
+}
+
+.Header > section > p {
+    font-size: 2rem;
+}
